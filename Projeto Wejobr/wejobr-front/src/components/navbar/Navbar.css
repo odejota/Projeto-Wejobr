@@ -1,0 +1,104 @@
+nav li a {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    color: black !important; 
+}
+
+.navbarcolor {
+    background-color: #F1F1F1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+.nav-link:hover {
+    color: #006837 !important;
+    text-decoration: solid;
+    text-decoration-line: underline;
+    text-decoration-color: #FBED21;
+    text-underline-offset: 8px;
+    transition: ease-in-out 0.3s;
+}
+
+.btnEntrar {
+    background-color: #FBED21;
+    color: black;
+    border-radius: 20px;
+}
+
+.btnEntrar:hover {
+    background-color: transparent;
+    color: #FBED21;
+    border-color: #FBED21;
+    transition: ease-in-out 0.3s;
+}
+
+.btnCadastrar {
+    background-color: #006837;
+    color: #F1F1F1;
+    border-radius: 20px;
+}
+
+.btnCadastrar:hover {
+    background-color: transparent;
+    color: #006837;
+    border-color: #006837;
+    transition: ease-in-out 0.3s;
+}
+
+#idiomaDropdown {
+    color: #2A2665;
+    text-decoration: none;
+}
+
+#idiomaDropdown:hover {
+    color: #FBED21;
+    transition: ease-in-out 0.2s;
+}
+
+#idiomaDropStyle {
+    border-radius: 20px;
+}
+
+#idiomaDropStyle a:hover {
+    background-color: transparent;
+    color: #FBED21 !important;
+    transition: ease-in-out 0.2s;
+}
+
+.navbar-collapse {
+    text-align: center;
+}
+
+.navbar-collapse ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+}
+
+.navbar-collapse li a {
+    margin-right: 3vh;
+}
+
+.navbar-collapse form {
+    justify-content: center;
+}
+
+@media (max-width: 991.98px) {
+    .offcanvas-collapse {
+      position: fixed;
+      top: 56px; /* Height of navbar */
+      bottom: 0;
+      left: 100%;
+      width: 100%;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      overflow-y: auto;
+      visibility: hidden;
+      background-color: #F1F1F1;
+      transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    }
+    .offcanvas-collapse.open {
+      visibility: visible;
+      transform: translateX(-100%);
+    }
+  }

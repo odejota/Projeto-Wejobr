@@ -1,0 +1,43 @@
+#homeSection1 h2{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+#homeSection1 h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+}
+
+.homeBtns{
+    display:flex;
+    justify-content:center;
+}
+
+.btnProcEmp {
+    background-color: #FBED21;
+    color: black;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.btnProcEmp:hover {
+    background-color: transparent;
+    color: #FBED21;
+    border-color: #FBED21;
+    transition: ease-in-out 0.3s;
+}
+
+.btnContrat {
+    background-color: #2A2665;
+    color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.btnContrat:hover {
+    background-color: transparent;
+    color: #2A2665;
+    border-color: #2A2665;
+    transition: ease-in-out 0.3s;
+}
