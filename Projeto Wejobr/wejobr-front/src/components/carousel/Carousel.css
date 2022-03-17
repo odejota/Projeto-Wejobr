@@ -1,0 +1,8 @@
+.carousel-caption {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.63);
+}
+
+.carousel-caption h2{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+}
