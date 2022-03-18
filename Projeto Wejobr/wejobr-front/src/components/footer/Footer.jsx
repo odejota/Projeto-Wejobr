@@ -1,8 +1,15 @@
 import './Footer.css';
 import logoFooter from '../../img/SVG Logos/Wejobr-Logo-full_preto.svg';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import ModalLogin from '../modal/Modal.login';
 
 function Footer() {
+
+    const [show, setShow] = useState(false);
+    const hClose = () => setShow(false);
+    const hShow = () => setShow(true);
+
     return (
 
         <footer className="container-fluid py-4 d-flex justify-content-center footer1 bottom-0">
@@ -19,14 +26,15 @@ function Footer() {
                         <li><a className="text-muted">Candidato</a></li>
                         <li><a className="text-muted">Empresas</a></li>
                         <li><a className="text-muted">Vagas</a></li>
-                        <li><a className="text-muted">Sobre</a></li>
+                        <li><Link to='/sobre' className="text-muted">Sobre</Link></li>
                     </ul>
                 </div>
                 <div className="col-6 col-md-3 col-lg-2">
                     <h5>Candidato</h5>
                     <ul className="list-unstyled text-small">
                         <li><a className="text-muted">Cadastrar</a></li>
-                        <li><a className="text-muted">Entrar</a></li>
+                        <li className="text-muted" onClick={hShow}>Entrar</li>
+                        {show ? <ModalLogin show={show} hClose={hClose}/> : <></>}
                         <li><a className="text-muted">Cadastrar Currículo</a></li>
                         <li><a className="text-muted">Vagas</a></li>
                     </ul>

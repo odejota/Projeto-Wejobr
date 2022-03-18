@@ -1,0 +1,48 @@
+.vagaCard {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 18rem;
+}
+
+.vagaCard:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: ease-in-out 0.3s;
+}
+
+.card-header {
+    background-color: #F1F1F1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.vagaCard h6{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.btnVaga{                       /*<--- Usado tbm no Modal das Vagas ---- */
+    background-color: #2A2665;
+    color: white;
+    border-radius: 20px;
+}
+
+.btnVaga:hover{
+    background-color: transparent;
+    border-color: #2A2665;
+    color: #2A2665;
+    border-radius: 20px;
+    transition: ease-in-out 0.3s;
+}
+
+.cardImg{
+    width: 20%;
+}
+
+#linha-vertical{
+    height: auto;
+    border-right: 1px solid gray;
+}
+
+.card-text{
+    list-style: none;
+}

@@ -6,7 +6,7 @@ import oSimbolo from '../../../img/SVG Logos/Wejobr-Logo-Explanação.svg';
 
 function Sobre() {
     return (
-        <section class="container my-4" id="sobreSection1">
+        <section className="container my-4" id="sobreSection1">
             <h2>Sobre o Wejobr</h2>
 
             <h3>A história</h3>
@@ -18,35 +18,39 @@ function Sobre() {
             <p>Conforme relatório fornecido pelo <a href="https://www.acnur.org/portugues/">ACNUR</a> (Alto Comissariado das Nações Unidas para Refugiados), o tema Geração de Renda e Autossuficiência é a principal necessidade das pessoas refugiadas, apontada no formulário KoBo. Neste diagnóstico, foi identificada a oferta limitada de vagas de emprego aos refugiados, o que moveu a busca por uma ferramenta que auxilie a resolver este problema.</p>
             <p>O Wejobr consiste em um site que disponibiliza vagas de emprego nas mais diversas áreas, voltadas a contratação de pessoas refugiadas, proporcionando tanto a busca de vagas de emprego (pelos candidatos), assim com a busca de profissionais (para as empresas).</p>
 
+            <hr className='my-4' />
+
             <h3>Os wejobers (Squad 22)</h3>
-            <div class="squad22 mt-4">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <img src={Carla} alt="Carla Image" className='rounded-circle' />
+            <div className="squad22 mt-4">
+                <div className="row">
+                    <div className="col-lg-4">
+                        <img src={Carla} alt="Carla Image" className='rounded-circle shadow' />
 
                         <h5>Carla Peloia</h5>
-                        <a class="bi bi-github fs-4 text-dark mx-2" href="#"></a>
-                        <a class="bi bi-linkedin fs-4 text-dark mx-2" href="#"></a>
+                        <a className="bi bi-github fs-4 text-dark mx-2" href="#"></a>
+                        <a className="bi bi-linkedin fs-4 text-dark mx-2" href="#"></a>
                     </div>
-                    <div class="col-lg-4">
-                        <img src={Danilo} alt="Danilo Image" className='rounded-circle' />
+                    <div className="col-lg-4">
+                        <img src={Danilo} alt="Danilo Image" className='rounded-circle shadow' />
 
                         <h5>Danilo José</h5>
-                        <a class="bi bi-github fs-4 text-dark mx-2" href="#"></a>
-                        <a class="bi bi-linkedin fs-4 text-dark mx-2" href="#"></a>
+                        <a className="bi bi-github fs-4 text-dark mx-2" href="#"></a>
+                        <a className="bi bi-linkedin fs-4 text-dark mx-2" href="#"></a>
                     </div>
-                    <div class="col-lg-4">
-                        <img src={Flavio} alt="Flávio Image" className='rounded-circle' />
+                    <div className="col-lg-4">
+                        <img src={Flavio} alt="Flávio Image" className='rounded-circle shadow' />
 
                         <h5>Flávio Silva</h5>
-                        <a class="bi bi-github fs-4 text-dark mx-2" href="#"></a>
-                        <a class="bi bi-linkedin fs-4 text-dark mx-2" href="#"></a>
+                        <a className="bi bi-github fs-4 text-dark mx-2" href="#"></a>
+                        <a className="bi bi-linkedin fs-4 text-dark mx-2" href="#"></a>
                     </div>
                 </div>
             </div>
 
+            <hr className='my-4' />
+
             <h3>O símbolo</h3>
-            <div class="simbolo">
+            <div className="simbolo">
                 <img src={oSimbolo} alt="Explanação da logo Wejober" style={{ width: "70%" }} />
             </div>
         </section>

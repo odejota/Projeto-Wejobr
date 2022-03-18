@@ -32,7 +32,7 @@ function Navbar() {
                             <a className="nav-link active" href="#">Candidato</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active" href="#">Vagas</a>
+                            <Link to='/vagas' className="nav-link active">Vagas</Link>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link active" href="#">Empresas</a>
@@ -53,7 +53,7 @@ function Navbar() {
                                 <li><a className="dropdown-item" href="#"><img src={ES} alt="ES" /> Espanhol</a></li>
                             </ul>
                         </div>
-                        <button className="btn btnEntrar mx-1" type="button" onClick={() => hShow()}>Entrar</button>
+                        <button className="btn btnEntrar mx-1" type="button" onClick={hShow}>Entrar</button>
                         {show ? <ModalLogin show={show} hClose={hClose}/> : <></>}
                         <button className="btn btnCadastrar mx-1" type="button">Cadastrar</button>
                     </form>
