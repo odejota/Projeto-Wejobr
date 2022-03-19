@@ -4,7 +4,7 @@ import './Modal.login.css';
 function ModalLogin(props) {
     return (
         <>
-            <Modal {...props} size="" aria-labelledby="contained-modal-title-vcenter" centered backdrop="static" keyboard={false} show={props.show} onHide={props.hClose}>
+            <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered backdrop="static" keyboard={false} show={props.show} onHide={props.hClose}>
 
                 <div className="modalLogin modal-content">
                     <div className="modal-body modalLogin">

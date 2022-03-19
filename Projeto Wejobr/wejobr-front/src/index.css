@@ -23,3 +23,41 @@ html {
     font-size: 16px;
   }
 }
+
+.underAmarela{
+  text-decoration-line: underline;
+  text-decoration-thickness: 6px;
+  text-decoration-color: #FBED21;
+  text-underline-offset: 7px;
+}
+
+.underVerde{
+  text-decoration-line: underline;
+  text-decoration-thickness: 6px;
+  text-decoration-color: #006837;
+  text-underline-offset: 7px;
+}
+
+.underAzul{
+  text-decoration-line: underline;
+  text-decoration-thickness: 6px;
+  text-decoration-color: #2A2665;
+  text-underline-offset: 7px;
+}
+
+.underTricolor {
+  padding-bottom: 8px;
+  position: relative;
+  text-decoration: none;
+}
+
+.underTricolor::after {
+  background: #FBED21;
+  background: linear-gradient(to right, #006837 33%, #FBED21 33%, #FBED21 66%, #2A2665 66%, #2A2665);  
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+}

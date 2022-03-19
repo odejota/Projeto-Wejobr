@@ -41,7 +41,7 @@ function Navbar() {
                             <Link to='/sobre' className="nav-link active">Sobre</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Admin</a>
+                            <Link to='/admin' className="nav-link">Admin</Link>
                         </li>
                     </ul>
                     <form className="d-flex align-items-center">

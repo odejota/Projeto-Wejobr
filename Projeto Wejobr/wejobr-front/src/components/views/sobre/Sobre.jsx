@@ -7,7 +7,7 @@ import oSimbolo from '../../../img/SVG Logos/Wejobr-Logo-Explanação.svg';
 function Sobre() {
     return (
         <section className="container my-4" id="sobreSection1">
-            <h2>Sobre o Wejobr</h2>
+            <h2><span className='underTricolor'>Sobre o Wejobr</span></h2>
 
             <h3>A história</h3>
             <p>O projeto surgiu durante cumprimento de atividades práticas no curso do Recode Pro 2021, através do qual são formados desenvolvedores full-stack, fornecendo conhecimentos aos alunos para desenvolvimento de aplicações web.</p>

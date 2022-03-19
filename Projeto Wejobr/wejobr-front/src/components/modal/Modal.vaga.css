@@ -23,19 +23,6 @@
     transition: ease-in-out 0.3s;
 }
 
-.btnDeletar {
-    background-color: #812020;
-    color: white;
-    border-radius: 20px;
-}
-
-.btnDeletar:hover {
-    background-color: transparent;
-    color: #ff0000;
-    border-color: #ff0000;
-    transition: ease-in-out 0.3s;
-}
-
 .bi-x-circle{
     cursor: pointer;
 }

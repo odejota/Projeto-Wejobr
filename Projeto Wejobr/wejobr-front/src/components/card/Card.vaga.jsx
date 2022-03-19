@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import ModalVaga from '../modal/Modal.vaga';
-import './VagaCard.css';
+import './Card.vaga.css';
 
-function VagaCard() {
+function CardVaga() {
 
     const [show, setShow] = useState(false);
     const hClose = () => setShow(false);
@@ -31,4 +31,4 @@ function VagaCard() {
     );
 };
 
-export default VagaCard;
+export default CardVaga;
