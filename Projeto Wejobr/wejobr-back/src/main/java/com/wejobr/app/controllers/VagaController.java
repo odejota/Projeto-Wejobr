@@ -13,40 +13,41 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wejobr.app.entities.Recrutador;
-import com.wejobr.app.services.RecrutadorService;
+import com.wejobr.app.entities.Vaga;
+import com.wejobr.app.services.VagaService;
 
 @RestController
-@RequestMapping ("/recrutadores")
+@RequestMapping ("/vagas")
 //@CrossOrigin(origins = "http://localhost:3000")
-public class RecrutadorController {
+public class VagaController {
 	
 	@Autowired
-	private RecrutadorService service;
+	private VagaService service;
 	
 	@GetMapping
-	public List<Recrutador> select() {
+	public List<Vaga> select() {
 		return service.select();
 	}
 	
-	@GetMapping("/{IdRecrutador}")
-	public Recrutador selectedById(@PathVariable Long IdRecrutador) {
-		return service.selectById(IdRecrutador).get();
-	}
-
-	@PostMapping("/admin/cadastrarRecrutador")
-	public Recrutador insert(@RequestBody Recrutador recrutador) {
-		return service.insert(recrutador);
-	}
-
-	@DeleteMapping("/admin/deletarRecrutador/{IdRecrutador}")
-	public void delete(@PathVariable Long IdRecrutador) {
-		service.delete(IdRecrutador);
+	@GetMapping("/{CodVaga}")
+	public Vaga selectedById(@PathVariable Long CodVaga) {
+		return service.selectById(CodVaga).get();
 	}
 	
-	@PutMapping("/admin/editarRecrutador")
-	public void update(@RequestBody Recrutador recrutador) {
-		service.update(recrutador);
-}
+
+	@PostMapping("/admin/cadastrarVaga")
+	public Vaga insert(@RequestBody Vaga vaga) {
+		return service.insert(vaga);
+	}
+
+	@DeleteMapping("/admin/deletarVaga/{CodVaga}")
+	public void delete(@PathVariable Long CodVaga) {
+		service.delete(CodVaga);
+	}
+	
+	@PutMapping("/admin/editarEmpresa")
+	public void update(@RequestBody Vaga vaga) {
+		service.update(vaga);
+	}
 
 }

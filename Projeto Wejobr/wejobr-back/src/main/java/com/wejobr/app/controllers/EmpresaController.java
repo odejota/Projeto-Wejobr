@@ -38,7 +38,7 @@ public class EmpresaController {
 		return service.insert(empresa);
 	}
 
-	@DeleteMapping("/admin/{IdCandidato}")
+	@DeleteMapping("/admin/deletarEmpresa/{IdCandidato}")
 	public void delete(@PathVariable Long IdEmpresa) {
 		service.delete(IdEmpresa);
 	}

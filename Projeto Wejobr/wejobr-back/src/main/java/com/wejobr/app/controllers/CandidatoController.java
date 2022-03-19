@@ -39,7 +39,7 @@ public class CandidatoController {
 		return service.insert(candidato);
 	}
 
-	@DeleteMapping("/admin/{IdCandidato}")
+	@DeleteMapping("/admin/deletarCandidato/{IdCandidato}")
 	public void delete(@PathVariable Long IdCandidato) {
 		service.delete(IdCandidato);
 	}
