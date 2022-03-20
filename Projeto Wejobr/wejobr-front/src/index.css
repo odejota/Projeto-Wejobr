@@ -45,6 +45,13 @@ html {
   text-underline-offset: 7px;
 }
 
+.underVermelha{
+  text-decoration-line: underline;
+  text-decoration-thickness: 6px;
+  text-decoration-color: #812020;
+  text-underline-offset: 7px;
+}
+
 .underTricolor {
   padding-bottom: 8px;
   position: relative;

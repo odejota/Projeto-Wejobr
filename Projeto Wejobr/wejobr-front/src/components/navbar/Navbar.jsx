@@ -29,13 +29,14 @@ function Navbar() {
                             <Link to='/' className="nav-link active">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active" href="#">Candidato</a>
+                            <a className="nav-link active" href="#" onClick={hShow}>Candidato</a>
+                            {show ? <ModalLogin show={show} hClose={hClose} /> : <></>}
                         </li>
                         <li className="nav-item">
                             <Link to='/vagas' className="nav-link active">Vagas</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active" href="#">Empresas</a>
+                            <Link to='/empresa' className="nav-link active">Empresas</Link>
                         </li>
                         <li className="nav-item">
                             <Link to='/sobre' className="nav-link active">Sobre</Link>
@@ -54,8 +55,8 @@ function Navbar() {
                             </ul>
                         </div>
                         <button className="btn btnEntrar mx-1" type="button" onClick={hShow}>Entrar</button>
-                        {show ? <ModalLogin show={show} hClose={hClose}/> : <></>}
-                        <button className="btn btnCadastrar mx-1" type="button">Cadastrar</button>
+                        {show ? <ModalLogin show={show} hClose={hClose} /> : <></>}
+                        <Link to='/candidato/cadastrarCandidato' className="btn btnCadastrar mx-1" type="button">Cadastrar</Link>
                     </form>
                 </div>
             </div>

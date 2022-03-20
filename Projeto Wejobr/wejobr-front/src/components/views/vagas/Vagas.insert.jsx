@@ -1,15 +1,32 @@
+import { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import Admin from '../admin/Admin';
+import conn from '../../../server/conn';
 import './Vagas.css';
 
 function VagaInsert() {
+
+    const cidade = useRef();
+    const pais = useRef();
+    const continente = useRef();
+    const aeroportos_IATA = useRef();
+
+    function sendData(event) {
+        event.preventDefault()
+        conn.post('/vagas/cadastrarVaga', {
+            cidade: cidade.current.value,
+            pais: pais.current.value,
+            continente: continente.current.value,
+            aeroportos_IATA: aeroportos_IATA.current.value
+        }).then(() => window.location.reload()).catch((erro) => console.log(erro))
+    }
+
     return (
         <section className="container my-4" id="vagasSection1">
 
             <h2 className='underVerde'>Cadastrar vaga</h2>
             <div className="align-items-stretch g-4 py-5 d-flex justify-content-center">
 
-                <form className="bg-light row g-3 rounded p-3">
+                <form className="bg-light row g-3 rounded p-3" onSubmit={sendData}>
                     <div className="col-md-6">
                         <label className="form-label">Cargo</label>
                         <input required type="text" className="form-control" placeholder='Auxiliar de Estoque' />

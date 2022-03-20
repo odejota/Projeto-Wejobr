@@ -23,36 +23,37 @@ function Footer() {
                     <h5>Site</h5>
                     <ul className="list-unstyled text-small">
                         <li><Link to='/' className="text-muted">Home</Link></li>
-                        <li><a className="text-muted">Candidato</a></li>
-                        <li><a className="text-muted">Empresas</a></li>
-                        <li><a className="text-muted">Vagas</a></li>
+                        <li className="text-muted pointer" onClick={hShow}>Candidato</li>
+                        {show ? <ModalLogin show={show} hClose={hClose}/> : <></>}
+                        <li><Link to='/empresa' className="text-muted">Empresas</Link></li>
+                        <li><Link to='/vagas' className="text-muted">Vagas</Link></li>
                         <li><Link to='/sobre' className="text-muted">Sobre</Link></li>
                     </ul>
                 </div>
                 <div className="col-6 col-md-3 col-lg-2">
                     <h5>Candidato</h5>
                     <ul className="list-unstyled text-small">
-                        <li><a className="text-muted">Cadastrar</a></li>
-                        <li className="text-muted" onClick={hShow}>Entrar</li>
+                        <li><Link to='/candidato/cadastrarCandidato' className="text-muted">Cadastrar</Link></li>
+                        <li className="text-muted pointer" onClick={hShow}>Entrar</li>
                         {show ? <ModalLogin show={show} hClose={hClose}/> : <></>}
-                        <li><a className="text-muted">Cadastrar Currículo</a></li>
-                        <li><a className="text-muted">Vagas</a></li>
+                        <li><Link to='/candidato/cadastrarCandidato' className="text-muted">Cadastrar Currículo</Link></li>
+                        <li><Link to='/vagas' className="text-muted">Vagas</Link></li>
                     </ul>
                 </div>
                 <div className="col-6 col-md-3 col-lg-2">
                     <h5>Empresas</h5>
                     <ul className="list-unstyled text-small">
-                        <li><a className="text-muted">Área da Empresa</a></li>
-                        <li><a className="text-muted">Cadastrar Empresa</a></li>
-                        <li><a className="text-muted">Cadastrar Recrutador</a></li>
-                        <li><a className="text-muted">Cadastrar Vagas</a></li>
+                        <li><Link to='/empresa' className="text-muted">Área da Empresa</Link></li>
+                        <li><Link to='/empresa/cadastrarEmpresa' className="text-muted">Cadastrar Empresa</Link></li>
+                        <li><Link to='/recrutador/cadastrarRecrutador' className="text-muted">Cadastrar Recrutador</Link></li>
+                        <li><Link to='/vagas/cadastrarVaga' className="text-muted">Cadastrar Vagas</Link></li>
                     </ul>
                 </div>
                 <div className="col-6 col-md-3 col-lg-3">
                     <h5>Contato</h5>
                     <ul className="list-unstyled text-small">
-                        <li><a className="text-muted">Telefone: (99) 99999-9999</a></li>
-                        <li><a className="text-muted">E-mail: contato@wejobr.com</a></li>
+                        <li className="text-muted">Telefone: (99) 99999-9999</li>
+                        <li className="text-muted">E-mail: contato@wejobr.com</li>
                     </ul>
                 </div>
             </div>
