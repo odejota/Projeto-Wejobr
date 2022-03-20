@@ -24,12 +24,12 @@ public class CandidatoController {
 	@Autowired
 	private CandidatoService service;
 	
-	@GetMapping
+	@GetMapping("/admin/listarTodos")
 	public List<Candidato> select() {
 		return service.select();
 	}
 	
-	@GetMapping("/{IdCandidato}")
+	@GetMapping("/admin/listarPorId/{IdCandidato}")
 	public Candidato selectedById(@PathVariable Long IdCandidato) {
 		return service.selectById(IdCandidato).get();
 	}
@@ -39,7 +39,7 @@ public class CandidatoController {
 		return service.insert(candidato);
 	}
 
-	@DeleteMapping("/admin/{IdCandidato}")
+	@DeleteMapping("/admin/deletarCandidato/{IdCandidato}")
 	public void delete(@PathVariable Long IdCandidato) {
 		service.delete(IdCandidato);
 	}
