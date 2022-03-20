@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.wejobr.app.entities.Empresa;
 import com.wejobr.app.entities.Vaga;
 import com.wejobr.app.repositories.VagaRepository;
 
@@ -21,6 +20,7 @@ public class VagaService {
 	public List<Vaga> select() {
 		return repository.findAll();
 	}
+	
 	
 	@Transactional(readOnly = true)
 	public Optional<Vaga> selectById(Long CodVaga) {

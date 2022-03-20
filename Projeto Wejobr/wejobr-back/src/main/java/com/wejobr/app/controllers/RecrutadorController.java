@@ -24,12 +24,12 @@ public class RecrutadorController {
 	@Autowired
 	private RecrutadorService service;
 	
-	@GetMapping
+	@GetMapping("/admin/listarTodos")
 	public List<Recrutador> select() {
 		return service.select();
 	}
 	
-	@GetMapping("/{IdRecrutador}")
+	@GetMapping("/admin/listarPorId/{IdRecrutador}")
 	public Recrutador selectedById(@PathVariable Long IdRecrutador) {
 		return service.selectById(IdRecrutador).get();
 	}

@@ -7,5 +7,6 @@ import com.wejobr.app.entities.Vaga;
 
 @Repository
 public interface VagaRepository extends JpaRepository <Vaga, Long>{
+	
 
 }
