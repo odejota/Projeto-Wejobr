@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import CardVaga from '../../card/Card.vaga';
 import Carousel from '../../carousel/Carousel';
 import CrslParceiros from '../../carousel/Carousel.parceiros';
 import './Home.css';
@@ -17,8 +19,13 @@ function Home() {
 
                 <h3>Vagas em Destaque</h3>
 
+                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 align-items-stretch g-4 py-5 d-flex justify-content-center">
+
+                    <CardVaga />
+
+                </div>
                 <div className="container">
-                    <a className="btn d-block btnCadastrar mb-5" type="button">Ver todas as vagas</a>
+                    <Link to='/vagas' className="btn d-block btnCadastrar mb-5" type="button">Ver todas as vagas</Link>
                 </div>
 
                 <CrslParceiros />

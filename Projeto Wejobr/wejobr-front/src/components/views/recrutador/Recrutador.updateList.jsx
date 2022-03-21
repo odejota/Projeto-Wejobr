@@ -36,24 +36,20 @@ function RecUpdtList() {
                             <th>Nome do recrutador</th>
                             <th>E-mail comercial</th>
                             <th>Telefone comercial</th>
-                            <th>Telefone celular</th>
                             <th>Empresa representada</th>
-                            <th>Código ID da empresa</th>
                             <th>Departamento</th>
                             <th>Cargo</th>
                         </tr>
                     </thead>
                     <tbody>
                         {recrutador.map((recrutador) => (
-                            <tr key={recrutador.idrecrutador}>
-                                <td>{recrutador.cidade}</td>
-                                <td>{recrutador.pais}</td>
-                                <td>{recrutador.pais}</td>
-                                <td>{recrutador.pais}</td>
-                                <td>{recrutador.continente}</td>
-                                <td>{recrutador.aeroportos_IATA}</td>
-                                <td>{recrutador.aeroportos_IATA}</td>
-                                <td>{recrutador.aeroportos_IATA}</td>
+                            <tr key={recrutador.idRecrutador}>
+                                <td>{recrutador.nomeRecrutador}</td>
+                                <td>{recrutador.emailRecrutador}</td>
+                                <td>{recrutador.telRecrutador}</td>
+                                <td>{recrutador.empresaRecrutador}</td>
+                                <td>{recrutador.departamentoRecrutador}</td>
+                                <td>{recrutador.cargoRecrutador}</td>
                                 <td>
                                     <button className="btn btn-warning btn-sm" onClick={() => hShow(recrutador)}>Editar</button>
                                 </td>

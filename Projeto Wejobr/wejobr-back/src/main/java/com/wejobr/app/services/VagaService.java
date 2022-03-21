@@ -27,7 +27,7 @@ public class VagaService {
 		return repository.findById(CodVaga);
 	}
 	
-	@Transactional(readOnly = true)
+	@Transactional(readOnly = false)
 	public void save(Vaga vaga) {
 		repository.save(vaga);
 	}

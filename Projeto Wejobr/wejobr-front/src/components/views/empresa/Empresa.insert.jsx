@@ -5,18 +5,22 @@ import '../vagas/Vagas.css';
 
 function EmpInsert() {
 
-    const cidade = useRef();
-    const pais = useRef();
-    const continente = useRef();
-    const aeroportos_IATA = useRef();
+    const nomeEmpresa = useRef();
+    const cnpjEmpresa = useRef();
+    const cepEmpresa = useRef();
+    const ramoEmpresa = useRef();
+    const telefoneEmpresa = useRef();
+    const linkedinEmpresa = useRef();
 
     function sendData(event) {
         event.preventDefault()
-        conn.post('/empresa/cadastrarEmpresa', {
-            cidade: cidade.current.value,
-            pais: pais.current.value,
-            continente: continente.current.value,
-            aeroportos_IATA: aeroportos_IATA.current.value
+        conn.post('/empresas/admin/cadastrarEmpresa', {
+            nomeEmpresa: nomeEmpresa.current.value,
+            cnpjEmpresa: cnpjEmpresa.current.value,
+            cepEmpresa: cepEmpresa.current.value,
+            ramoEmpresa: ramoEmpresa.current.value,
+            telefoneEmpresa: telefoneEmpresa.current.value,
+            linkedinEmpresa: linkedinEmpresa.current.value
         }).then(() => window.location.reload()).catch((erro) => console.log(erro))
     }
 
@@ -28,32 +32,32 @@ function EmpInsert() {
 
                 <form className="bg-light row g-3 rounded p-3 form-floating" onSubmit={sendData}>
                     <div className="col-md-6 form-floating">
-                        <input required type="text" className="form-control" id="floatingInput" placeholder='Seu Nome Aqui' />
-                        <label for="floatingInput">Nome da empresa</label>
+                        <input required type="text" className="form-control" id="floatingInput" placeholder='Oportunidades S/A' ref={nomeEmpresa} />
+                        <label htmlFor="floatingInput">Nome da empresa</label>
                     </div>
                     <div className="col-md-6 form-floating">
-                        <input required type="text" className="form-control" id="floatingInput" placeholder='Seu número de CNPJ' />
-                        <label for="floatingInput">CNPJ</label>
+                        <input required type="text" className="form-control" id="floatingInput" placeholder='Seu número de CNPJ' ref={cnpjEmpresa}/>
+                        <label htmlFor="floatingInput">CNPJ</label>
                     </div>
                     <div className="col-md-6 form-floating">
-                        <input required type="text" className="form-control" id="floatingInput" placeholder='Seu CEP' />
-                        <label for="floatingInput">CEP</label>
+                        <input required type="text" className="form-control" id="floatingInput" placeholder='Seu CEP' ref={cepEmpresa}/>
+                        <label htmlFor="floatingInput">CEP</label>
                     </div>
                     <div className="col-md-6 form-floating">
-                        <input required type="text" className="form-control" id="floatingInput" placeholder='Qual o ramo de sua empresa?' />
-                        <label for="floatingInput">Ramo</label>
+                        <input required type="text" className="form-control" id="floatingInput" placeholder='Qual o ramo de sua empresa?' ref={ramoEmpresa}/>
+                        <label htmlFor="floatingInput">Ramo</label>
                     </div>
                     <div className="col-md-6 form-floating">
-                        <input required type="text" className="form-control" id="floatingInput" placeholder='Número para contato com sua empresa' />
-                        <label for="floatingInput">Telefone</label>
+                        <input required type="text" className="form-control" id="floatingInput" placeholder='Número para contato com sua empresa' ref={telefoneEmpresa}/>
+                        <label htmlFor="floatingInput">Telefone</label>
                     </div>
                     <div className="col-md-6 form-floating">
-                        <input type="text" className="form-control" id="floatingInput" placeholder='Como podemos achar sua empresa no LinkedIn?' />
-                        <label for="floatingInput">LinkedIn</label>
+                        <input type="text" className="form-control" id="floatingInput" placeholder='Como podemos achar sua empresa no LinkedIn?' ref={linkedinEmpresa}/>
+                        <label htmlFor="floatingInput">LinkedIn</label>
                     </div>
                     <div className="form-check">
                         <input required className="form-check-input" type="checkbox" id="gridCheck" />
-                        <label className="form-check-label" for="gridCheck">
+                        <label className="form-check-label" htmlFor="gridCheck">
                             Li e aceito os presentes Termos e Condições de Uso
                         </label>
                     </div>

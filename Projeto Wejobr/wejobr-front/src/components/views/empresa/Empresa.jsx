@@ -47,7 +47,7 @@ function Empresa() {
                     <div className="col-md-7">
                         <h2 className="featurette-heading">Dolor. <span className="text-muted">Sit.</span></h2>
                         <p className="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit minus odit voluptatem facilis inventore? Fugit adipisci animi labore voluptates. Repellat deleniti dolorum ab dicta dolor tempore consectetur architecto ut sunt.</p>
-                        <Link to='' className='btn btnCadastrar'>Cadastre sua empresa</Link>
+                        <Link to='/empresa/cadastrarEmpresa' className='btn btnCadastrar'>Cadastre sua empresa</Link>
                     </div>
                     <div className="col-md-5">
                         <img className='featurette-image img-fluid mx-auto' src={Img3} alt="" />
@@ -59,7 +59,7 @@ function Empresa() {
                 <div className="row btnsEmp">
                     <Link to='/vagas/cadastrarVaga' className='btn btnVaga col-5 col-md-4 col-lg-3 m-3'>Cadastrar vagas</Link>
                     <Link to='' className='btn btnEntrar col-5 col-md-4 col-lg-3 m-3'>Buscar currículos</Link>
-                    <Link to='' className='btn btnCadastrar col-7 col-md-4 col-lg-3 m-3'>Cadastre sua empresa</Link>
+                    <Link to='/empresa/cadastrarEmpresa' className='btn btnCadastrar col-7 col-md-4 col-lg-3 m-3'>Cadastre sua empresa</Link>
                 </div>
 
             </div>

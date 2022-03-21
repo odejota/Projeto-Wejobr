@@ -25,7 +25,7 @@ public class RecrutadorService {
 		return repository.findById(IdRecrutador);
 	}
 	
-	@Transactional(readOnly = true)
+	@Transactional(readOnly = false)
 	public void save(Recrutador recrutador) {
 		repository.save(recrutador);
 	}

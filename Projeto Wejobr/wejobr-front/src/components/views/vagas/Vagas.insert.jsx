@@ -5,18 +5,28 @@ import './Vagas.css';
 
 function VagaInsert() {
 
-    const cidade = useRef();
-    const pais = useRef();
-    const continente = useRef();
-    const aeroportos_IATA = useRef();
+    const cargoVaga = useRef();
+    const descricaoVaga = useRef();
+    const salarioVaga = useRef();
+    const nivelInstrucaoVaga = useRef();
+    const localidadeVaga = useRef();
+    const regimeContratacaoVaga = useRef();
+    const vagaPcd = useRef();
+    const vagaDestaque = useRef();
+    const nomeEmpresaVaga = useRef();
 
     function sendData(event) {
         event.preventDefault()
-        conn.post('/vagas/cadastrarVaga', {
-            cidade: cidade.current.value,
-            pais: pais.current.value,
-            continente: continente.current.value,
-            aeroportos_IATA: aeroportos_IATA.current.value
+        conn.post('/vagas/admin/cadastrarVaga', {
+            cargoVaga: cargoVaga.current.value,
+            descricaoVaga: descricaoVaga.current.value,
+            salarioVaga: salarioVaga.current.value,
+            nivelInstrucaoVaga: nivelInstrucaoVaga.current.value,
+            localidadeVaga: localidadeVaga.current.value,
+            regimeContratacaoVaga: regimeContratacaoVaga.current.value,
+            vagaPcd: vagaPcd.current.value,
+            vagaDestaque: vagaDestaque.current.value,            
+            nomeEmpresaVaga: nomeEmpresaVaga.current.value
         }).then(() => window.location.reload()).catch((erro) => console.log(erro))
     }
 
@@ -29,30 +39,30 @@ function VagaInsert() {
                 <form className="bg-light row g-3 rounded p-3" onSubmit={sendData}>
                     <div className="col-md-6">
                         <label className="form-label">Cargo</label>
-                        <input required type="text" className="form-control" placeholder='Auxiliar de Estoque' />
+                        <input required type="text" className="form-control" placeholder='Auxiliar de Estoque' ref={cargoVaga}/>
                     </div>
                     <div className="col-md-6">
                         <label className="form-label">Código da vaga</label>
-                        <input required type="text" className="form-control" placeholder='123' />
+                        <input disabled type="text" className="form-control" placeholder='Criado automaticamente'/>
                     </div>
                     <div className="col-md-5">
                         <label className="form-label">Salário</label>
                         <div className="input-group">
                             <div className="input-group-text">R$</div>
-                            <input required type="text" className="form-control" placeholder='2.235' />
+                            <input required type="text" className="form-control" placeholder='2.235' ref={salarioVaga}/>
                         </div>
                     </div>
                     <div className="col-md-7">
                         <label className="form-label">Localidade</label>
-                        <input required type="text" className="form-control" placeholder='Belo Horizonte - MG' />
+                        <input required type="text" className="form-control" placeholder='Belo Horizonte - MG' ref={localidadeVaga}/>
                     </div>
                     <div className="col-md-12">
                         <label className="form-label">Descrição da vaga</label>
-                        <textarea required type="text" className="form-control" placeholder='' />
+                        <textarea required type="text" className="form-control" placeholder='' ref={descricaoVaga}/>
                     </div>
-                    <div className="col-auto">
+                    <div className="col-md-4">
                         <label className="form-label">Nível de instrução</label>
-                        <select required className="form-select" >
+                        <select required className="form-select" ref={nivelInstrucaoVaga}>
                             <option className='text-muted'>Escolha...</option>
                             <option value={"Fundamental"}>Fundamental</option>
                             <option value={"Médio"}>Médio</option>
@@ -60,21 +70,29 @@ function VagaInsert() {
                             <option value={"Técnico"}>Técnico</option>
                         </select>
                     </div>
-                    <div className="col-auto">
+                    <div className="col-md-4">
                         <label className="form-label">Vaga também direcionada à PCD?</label>
-                        <select required className="form-select" >
+                        <select required className="form-select" ref={vagaPcd}>
                             <option className='text-muted'>Escolha...</option>
                             <option value={"Sim"}>Sim</option>
                             <option value={"Não"}>Não</option>
                         </select>
                     </div>
-                    <div className="col-auto">
-                        <label className="form-label">Regime de contratação</label>
-                        <input required type="text" className="form-control" placeholder="CLT, PJ, Freelance..." />
+                    <div className="col-md-4">
+                        <label className="form-label">Deseja destacar essa oportunidade?</label>
+                        <select required className="form-select" ref={vagaDestaque}>
+                            <option className='text-muted'>Escolha...</option>
+                            <option value={"Sim"}>Sim</option>
+                            <option value={"Não"}>Não</option>
+                        </select>
                     </div>
-                    <div className="col-auto">
-                        <label className="form-label">ID da empresa</label>
-                        <input required type="text" className="form-control" placeholder="321" />
+                    <div className="col-md-6">
+                        <label className="form-label">Regime de contratação</label>
+                        <input required type="text" className="form-control" placeholder="CLT, PJ, Freelance..." ref={regimeContratacaoVaga}/>
+                    </div>
+                    <div className="col-md-6">
+                        <label className="form-label">Empresa</label>
+                        <input  type="text" className="form-control" placeholder="Nome da empresa empregadora" ref={nomeEmpresaVaga}/>
                     </div>
                     <div className="col-12">
                         <button type='submit' className='mx-1 btn btnCadastrar'>Cadastrar vaga</button>

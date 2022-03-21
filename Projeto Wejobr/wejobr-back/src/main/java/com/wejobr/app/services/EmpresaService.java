@@ -25,7 +25,7 @@ public class EmpresaService {
 		return repository.findById(IdEmpresa);
 	}
 	
-	@Transactional(readOnly = true)
+	@Transactional(readOnly = false)
 	public void save(Empresa empresa) {
 		repository.save(empresa);
 	}

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import conn from '../../../server/conn';
+import CandUpdate from '../../offcanvas/Offcanvas.candidato';
 import '../vagas/Vagas.css';
-import CandUpdate from './Candidato.update';
 
 function CandUpdtList() {
 
@@ -17,7 +17,7 @@ function CandUpdtList() {
     const [candidatoUpdt, setCandidatoUpdt] = useState();
 
     useEffect(() => {
-        conn.get('/candidatos')
+        conn.get('/candidatos/admin/listarTodos')
             .then((res) => {
                 setCandidato(res.data)
             })
@@ -36,7 +36,7 @@ function CandUpdtList() {
                             <th>Nome</th>
                             <th>Data de nascimento</th>
                             <th>Nacionalidade</th>
-                            <th>Doc. de identificação no Brasil</th>
+                            <th>Doc. de id. no Brasil</th>
                             <th>Idioma</th>
                             <th>E-mail</th>
                         </tr>
@@ -44,14 +44,14 @@ function CandUpdtList() {
                     <tbody>
                         {candidato.map((candidato) => (
                             <tr key={candidato.idCandidato}>
-                                <td>{candidato.cidade}</td>
-                                <td>{candidato.pais}</td>
-                                <td>{candidato.pais}</td>
-                                <td>{candidato.pais}</td>
-                                <td>{candidato.continente}</td>
-                                <td>{candidato.aeroportos_IATA}</td>
+                                <td>{candidato.nomeCandidato}</td>
+                                <td>{candidato.nascimentoCandidato}</td>
+                                <td>{candidato.nacionalidadeCandidato}</td>
+                                <td>{candidato.codIdentificacao}</td>
+                                <td>{candidato.idiomaCandidato}</td>
+                                <td>{candidato.emailCandidato}</td>
                                 <td>
-                                    <button className="btn btn-warning btn-sm" onClick={() => hShow(candidato)}>Editar</button>
+                                    <button className="btn btnEntrar btn-sm" onClick={() => hShow(candidato)}>Editar</button>
                                 </td>
                             </tr>
                         ))}

@@ -16,7 +16,7 @@ function RecDel() {
     }, []);
 
     function deletar(del) {
-        conn.delete(`/recrutadores/${del.target.value}`)
+        conn.delete(`/recrutadores/admin/deletarRecrutador/${del.target.value}`)
             .then(() => conn.get('/recrutadores')
                 .then((res) => {
                     setRecrutador(res.data)
@@ -43,11 +43,11 @@ function RecDel() {
                     <tbody>
                         {recrutador.map((recrutador) => (
                             <tr key={recrutador.idRecrutador}>
-                                <td>{recrutador.cidade}</td>
-                                <td>{recrutador.pais}</td>
-                                <td>{recrutador.pais}</td>
-                                <td>{recrutador.pais}</td>
-                                <td>{recrutador.continente}</td>
+                                <td>{recrutador.nomeRecrutador}</td>
+                                <td>{recrutador.empresaRecrutador}</td>
+                                <td>{recrutador.departamentoRecrutador}</td>
+                                <td>{recrutador.emailRecrutador}</td>
+                                <td>{recrutador.telRecrutador}</td>
                                 <td>
                                     <button className="btn btnDeletar btn-sm" value={recrutador.idRecrutador} onClick={(del) => deletar(del)}>Apagar</button>
                                 </td>

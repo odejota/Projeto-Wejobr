@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import conn from '../../../server/conn';
+import EmpUpdate from '../../offcanvas/Offcanvas.empresa';
 import '../vagas/Vagas.css';
-import EmpUpdate from './Empresa.update';
 
 function EmpUpdtList() {
 
@@ -43,15 +43,15 @@ function EmpUpdtList() {
                     </thead>
                     <tbody>
                         {empresa.map((empresa) => (
-                            <tr key={empresa.idempresa}>
-                                <td>{empresa.cidade}</td>
-                                <td>{empresa.pais}</td>
-                                <td>{empresa.pais}</td>
-                                <td>{empresa.pais}</td>
-                                <td>{empresa.continente}</td>
-                                <td>{empresa.aeroportos_IATA}</td>
+                            <tr key={empresa.idEmpresa}>
+                                <td>{empresa.nomeEmpresa}</td>
+                                <td>{empresa.cnpjEmpresa}</td>
+                                <td>{empresa.cepEmpresa}</td>
+                                <td>{empresa.ramoEmpresa}</td>
+                                <td>{empresa.telefoneEmpresa}</td>
+                                <td>{empresa.linkedinEmpresa}</td>
                                 <td>
-                                    <button className="btn btn-warning btn-sm" onClick={() => hShow(empresa)}>Editar</button>
+                                    <button className="btn btnEntrar btn-sm" onClick={() => hShow(empresa)}>Editar</button>
                                 </td>
                             </tr>
                         ))}

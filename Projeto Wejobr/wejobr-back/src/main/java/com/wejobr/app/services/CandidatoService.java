@@ -26,7 +26,7 @@ public class CandidatoService {
 		return repository.findById(IdCandidato);
 	}
 	
-	@Transactional(readOnly = true)
+	@Transactional(readOnly = false)
 	public void save(Candidato candidato) {
 		repository.save(candidato);
 	}

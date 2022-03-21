@@ -16,7 +16,7 @@ function EmpDel() {
     }, []);
 
     function deletar(del) {
-        conn.delete(`/empresas/${del.target.value}`)
+        conn.delete(`/empresas/admin/deletarEmpresa/${del.target.value}`)
             .then(() => conn.get('/empresas')
                 .then((res) => {
                     setEmpresa(res.data)
@@ -44,14 +44,14 @@ function EmpDel() {
                     <tbody>
                         {empresa.map((empresa) => (
                             <tr key={empresa.idEmpresa}>
-                                <td>{empresa.cidade}</td>
-                                <td>{empresa.pais}</td>
-                                <td>{empresa.pais}</td>
-                                <td>{empresa.pais}</td>
-                                <td>{empresa.continente}</td>
-                                <td>{empresa.aeroportos_IATA}</td>
+                                <td>{empresa.nomeEmpresa}</td>
+                                <td>{empresa.cnpjEmpresa}</td>
+                                <td>{empresa.cepEmpresa}</td>
+                                <td>{empresa.ramoEmpresa}</td>
+                                <td>{empresa.telefoneEmpresa}</td>
+                                <td>{empresa.linkedinEmpresa}</td>
                                 <td>
-                                    <button className="btn btnDeletar btn-sm" value={empresa.idDestino} onClick={(del) => deletar(del)}>Apagar</button>
+                                    <button className="btn btnDeletar btn-sm" value={empresa.idEmpresa} onClick={(del) => deletar(del)}>Apagar</button>
                                 </td>
                             </tr>
                         ))}

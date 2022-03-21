@@ -26,6 +26,8 @@ public class Candidato {
 	private String Cargo2Candidato;
 	private String Cargo3Candidato;
 	private String SenhaCandidato;
+	private String IdiomaCandidato;
+	private String OutroIdiomaCandidato;
 	
 	public Candidato() {
 		
@@ -33,7 +35,7 @@ public class Candidato {
 
 	public Candidato(Long idCandidato, String nomeCandidato, Date nascimentoCandidato, String estadoCivilCandidato,
 			String nacionalidadeCandidato, String codIdentificacao, String emailCandidato, String cargo1Candidato,
-			String cargo2Candidato, String cargo3Candidato, String senhaCandidato) {
+			String cargo2Candidato, String cargo3Candidato, String senhaCandidato, String idiomaCandidato, String outroIdiomaCandidato) {
 		super();
 		IdCandidato = idCandidato;
 		NomeCandidato = nomeCandidato;
@@ -46,6 +48,8 @@ public class Candidato {
 		Cargo2Candidato = cargo2Candidato;
 		Cargo3Candidato = cargo3Candidato;
 		SenhaCandidato = senhaCandidato;
+		IdiomaCandidato = idiomaCandidato;
+		OutroIdiomaCandidato = outroIdiomaCandidato;
 	}
 
 	public Long getIdCandidato() {
@@ -134,6 +138,22 @@ public class Candidato {
 
 	public void setSenhaCandidato(String senhaCandidato) {
 		SenhaCandidato = senhaCandidato;
+	}
+
+	public String getIdiomaCandidato() {
+		return IdiomaCandidato;
+	}
+
+	public void setIdiomaCandidato(String idiomaCandidato) {
+		IdiomaCandidato = idiomaCandidato;
+	}
+
+	public String getOutroIdiomaCandidato() {
+		return OutroIdiomaCandidato;
+	}
+
+	public void setOutroIdiomaCandidato(String outroIdiomaCandidato) {
+		OutroIdiomaCandidato = outroIdiomaCandidato;
 	}
 
 	@Override

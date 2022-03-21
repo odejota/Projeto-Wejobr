@@ -8,7 +8,7 @@ function CandDel() {
     const [candidato, setCandidato] = useState([]);
 
     useEffect(() => {
-        conn.get('/candidatos')
+        conn.get('/candidatos/admin/listarTodos')
             .then((res) => {
                 setCandidato(res.data)
             })
@@ -16,8 +16,8 @@ function CandDel() {
     }, []);
 
     function deletar(del) {
-        conn.delete(`/candidatos/${del.target.value}`)
-            .then(() => conn.get('/candidatos')
+        conn.delete(`/candidatos/admin/deletarCandidato/${del.target.value}`)
+            .then(() => conn.get('/candidatos/admin/listarTodos')
                 .then((res) => {
                     setCandidato(res.data)
                 })
@@ -36,7 +36,7 @@ function CandDel() {
                             <th>Nome</th>
                             <th>Data de nascimento</th>
                             <th>Nacionalidade</th>
-                            <th>Doc. de identificação no Brasil</th>
+                            <th>Doc. de id. no Brasil</th>
                             <th>Idioma</th>
                             <th>E-mail</th>
                         </tr>
@@ -44,14 +44,14 @@ function CandDel() {
                     <tbody>
                         {candidato.map((candidato) => (
                             <tr key={candidato.idCandidato}>
-                                <td>{candidato.cidade}</td>
-                                <td>{candidato.pais}</td>
-                                <td>{candidato.pais}</td>
-                                <td>{candidato.pais}</td>
-                                <td>{candidato.continente}</td>
-                                <td>{candidato.aeroportos_IATA}</td>
+                                <td>{candidato.nomeCandidato}</td>
+                                <td>{candidato.nascimentoCandidato}</td>
+                                <td>{candidato.nacionalidadeCandidato}</td>
+                                <td>{candidato.codIdentificacao}</td>
+                                <td>{candidato.idiomaCandidato}</td>
+                                <td>{candidato.emailCandidato}</td>
                                 <td>
-                                    <button className="btn btnDeletar btn-sm" value={candidato.idDestino} onClick={(del) => deletar(del)}>Apagar</button>
+                                    <button className="btn btnDeletar btn-sm" value={candidato.idCandidato} onClick={(del) => deletar(del)}>Apagar</button>
                                 </td>
                             </tr>
                         ))}
@@ -59,7 +59,7 @@ function CandDel() {
                 </table>
 
             </div>
-            
+
             <div className="col-12">
                 <Link to='/admin' type='button' className='mx-1 btn btnFechar'>Voltar</Link>
             </div>
