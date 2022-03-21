@@ -1,12 +1,11 @@
 package com.wejobr.app.entities;
 
+import java.util.Objects;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-
 
 
 @Entity
@@ -23,11 +22,7 @@ public class Vaga {
 	private String RegimeContratacaoVaga; 
 	private String VagaPcd;
 	private String VagaDestaque;
-	private String LogoEmpresa;
-	
-	@ManyToOne
-	@JoinColumn(name="empresa_IdEmpresa")
-	private Empresa empresa;
+	private String NomeEmpresaVaga;
 	
 	public Vaga() {
 		
@@ -35,7 +30,7 @@ public class Vaga {
 
 	public Vaga(Long codVaga, String cargoVaga, String descricaoVaga, Double salarioVaga, String nivelInstrucaoVaga,
 			String localidadeVaga, String regimeContratacaoVaga, String vagaPcd, String vagaDestaque,
-			String logoEmpresa, Empresa empresa) {
+			String nomeEmpresaVaga) {
 		super();
 		CodVaga = codVaga;
 		CargoVaga = cargoVaga;
@@ -46,10 +41,10 @@ public class Vaga {
 		RegimeContratacaoVaga = regimeContratacaoVaga;
 		VagaPcd = vagaPcd;
 		VagaDestaque = vagaDestaque;
-		LogoEmpresa = logoEmpresa;
-		this.empresa = empresa;
+		NomeEmpresaVaga = nomeEmpresaVaga;
 	}
 
+	
 	public Long getCodVaga() {
 		return CodVaga;
 	}
@@ -122,22 +117,30 @@ public class Vaga {
 		VagaDestaque = vagaDestaque;
 	}
 
-	public String getLogoEmpresa() {
-		return LogoEmpresa;
-	}
-
-	public void setLogoEmpresa(String logoEmpresa) {
-		LogoEmpresa = logoEmpresa;
-	}
-
-	public Empresa getEmpresa() {
-		return empresa;
-	}
-
-	public void setEmpresa(Empresa empresa) {
-		this.empresa = empresa;
-	}
 	
-	
+	public String getNomeEmpresaVaga() {
+		return NomeEmpresaVaga;
+	}
+
+	public void setNomeEmpresaVaga(String nomeEmpresaVaga) {
+		NomeEmpresaVaga = nomeEmpresaVaga;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(CodVaga);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Vaga other = (Vaga) obj;
+		return Objects.equals(CodVaga, other.CodVaga);
+	}
 
 }

@@ -3,6 +3,9 @@ package com.wejobr.app.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+//import org.springframework.security.access.prepost.PreAuthorize;
+//import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 //import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,8 +38,9 @@ public class CandidatoController {
 	}
 
 	@PostMapping("/admin/cadastrarCandidato")
-	public Candidato insert(@RequestBody Candidato candidato) {
-		return service.insert(candidato);
+	public ResponseEntity<Candidato> save(@RequestBody Candidato candidato) {
+		service.save(candidato);
+		return ResponseEntity.ok().body(candidato);
 	}
 
 	@DeleteMapping("/admin/deletarCandidato/{IdCandidato}")
@@ -45,8 +49,10 @@ public class CandidatoController {
 	}
 	
 	@PutMapping("/admin/editarCandidato")
-	public void update(@RequestBody Candidato candidato) {
-		service.update(candidato);
-}
+	public ResponseEntity<Candidato> update(@RequestBody Candidato candidato) {
+		candidato = service.update(candidato);
+		return ResponseEntity.ok().body(candidato);
+	}
+
 
 }

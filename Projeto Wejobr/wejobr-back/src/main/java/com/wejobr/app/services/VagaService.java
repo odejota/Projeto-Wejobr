@@ -28,9 +28,10 @@ public class VagaService {
 	}
 	
 	@Transactional(readOnly = true)
-	public Vaga insert(Vaga vaga) {
-		return repository.save(vaga);
+	public void save(Vaga vaga) {
+		repository.save(vaga);
 	}
+
 
 	@Transactional(readOnly = false)
 	public void delete(Long CodVaga) {
@@ -38,8 +39,8 @@ public class VagaService {
 	}
 	
 	@Transactional(readOnly = false)
-	public void update(Vaga vaga) {
-		repository.save(vaga);
+	public Vaga update(Vaga vaga) {
+		return repository.save(vaga);
 	}
 
 }

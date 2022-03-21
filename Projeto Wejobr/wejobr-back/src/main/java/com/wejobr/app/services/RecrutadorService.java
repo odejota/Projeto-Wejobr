@@ -6,7 +6,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.wejobr.app.entities.Recrutador;
 import com.wejobr.app.repositories.RecrutadorRepository;
 
@@ -27,8 +26,8 @@ public class RecrutadorService {
 	}
 	
 	@Transactional(readOnly = true)
-	public Recrutador insert(Recrutador recrutador) {
-		return repository.save(recrutador);
+	public void save(Recrutador recrutador) {
+		repository.save(recrutador);
 	}
 
 	@Transactional(readOnly = false)
@@ -37,8 +36,8 @@ public class RecrutadorService {
 	}
 	
 	@Transactional(readOnly = false)
-	public void update(Recrutador recrutador) {
-		repository.save(recrutador);
+	public Recrutador update(Recrutador recrutador) {
+		return repository.save(recrutador);
 	}
 
 
