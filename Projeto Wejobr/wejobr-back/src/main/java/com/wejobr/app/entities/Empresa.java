@@ -16,28 +16,27 @@ public class Empresa {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long IdEmpresa;
 	private String NomeEmpresa;
-	private String Cnpj_empresa;
-	private String Cep_empresa;
-	private String Ramo_empresa;
-	private String Telefone_empresa;
-	private String Linkedin_empresa;
+	private String CnpjEmpresa;
+	private String CepEmpresa;
+	private String RamoEmpresa;
+	private String TelefoneEmpresa;
+	private String LinkedinEmpresa;
 	
 
 	public Empresa(){
 		
 	}
 
-
-	public Empresa(Long idEmpresa, String nomeEmpresa, String cnpj_empresa, String cep_empresa, String ramo_empresa,
-			String telefone_empresa, String linkedin_empresa) {
+	public Empresa(Long idEmpresa, String nomeEmpresa, String cnpjEmpresa, String cepEmpresa, String ramoEmpresa,
+			String telefoneEmpresa, String linkedinEmpresa) {
 		super();
 		IdEmpresa = idEmpresa;
 		NomeEmpresa = nomeEmpresa;
-		Cnpj_empresa = cnpj_empresa;
-		Cep_empresa = cep_empresa;
-		Ramo_empresa = ramo_empresa;
-		Telefone_empresa = telefone_empresa;
-		Linkedin_empresa = linkedin_empresa;
+		CnpjEmpresa = cnpjEmpresa;
+		CepEmpresa = cepEmpresa;
+		RamoEmpresa = ramoEmpresa;
+		TelefoneEmpresa = telefoneEmpresa;
+		LinkedinEmpresa = linkedinEmpresa;
 	}
 
 
@@ -45,77 +44,57 @@ public class Empresa {
 		return IdEmpresa;
 	}
 
-
 	public void setIdEmpresa(Long idEmpresa) {
 		IdEmpresa = idEmpresa;
 	}
-
 
 	public String getNomeEmpresa() {
 		return NomeEmpresa;
 	}
 
-
 	public void setNomeEmpresa(String nomeEmpresa) {
 		NomeEmpresa = nomeEmpresa;
 	}
 
-
-	public String getCnpj_empresa() {
-		return Cnpj_empresa;
+	public String getCnpjEmpresa() {
+		return CnpjEmpresa;
 	}
 
-
-	public void setCnpj_empresa(String cnpj_empresa) {
-		Cnpj_empresa = cnpj_empresa;
+	public void setCnpjEmpresa(String cnpjEmpresa) {
+		CnpjEmpresa = cnpjEmpresa;
 	}
 
-
-	public String getCep_empresa() {
-		return Cep_empresa;
+	public String getCepEmpresa() {
+		return CepEmpresa;
 	}
 
-
-	public void setCep_empresa(String cep_empresa) {
-		Cep_empresa = cep_empresa;
+	public void setCepEmpresa(String cepEmpresa) {
+		CepEmpresa = cepEmpresa;
 	}
 
-
-	public String getRamo_empresa() {
-		return Ramo_empresa;
+	public String getRamoEmpresa() {
+		return RamoEmpresa;
 	}
 
-
-	public void setRamo_empresa(String ramo_empresa) {
-		Ramo_empresa = ramo_empresa;
+	public void setRamoEmpresa(String ramoEmpresa) {
+		RamoEmpresa = ramoEmpresa;
 	}
 
-
-	public String getTelefone_empresa() {
-		return Telefone_empresa;
+	public String getTelefoneEmpresa() {
+		return TelefoneEmpresa;
 	}
 
-
-	public void setTelefone_empresa(String telefone_empresa) {
-		Telefone_empresa = telefone_empresa;
+	public void setTelefoneEmpresa(String telefoneEmpresa) {
+		TelefoneEmpresa = telefoneEmpresa;
 	}
 
-
-	public String getLinkedin_empresa() {
-		return Linkedin_empresa;
+	public String getLinkedinEmpresa() {
+		return LinkedinEmpresa;
 	}
 
-
-	public void setLinkedin_empresa(String linkedin_empresa) {
-		Linkedin_empresa = linkedin_empresa;
+	public void setLinkedinEmpresa(String linkedinEmpresa) {
+		LinkedinEmpresa = linkedinEmpresa;
 	}
-
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(IdEmpresa);
-	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -128,7 +107,6 @@ public class Empresa {
 		Empresa other = (Empresa) obj;
 		return Objects.equals(IdEmpresa, other.IdEmpresa);
 	}
-	
 	
 
 }

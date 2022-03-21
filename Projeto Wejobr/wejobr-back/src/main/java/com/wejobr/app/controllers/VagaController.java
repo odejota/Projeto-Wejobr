@@ -3,6 +3,7 @@ package com.wejobr.app.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -36,8 +37,9 @@ public class VagaController {
 	
 
 	@PostMapping("/admin/cadastrarVaga")
-	public Vaga insert(@RequestBody Vaga vaga) {
-		return service.insert(vaga);
+	public ResponseEntity<Vaga> save(@RequestBody Vaga vaga) {
+		service.save(vaga);
+		return ResponseEntity.ok().body(vaga);
 	}
 
 	@DeleteMapping("/admin/deletarVaga/{CodVaga}")
@@ -45,9 +47,10 @@ public class VagaController {
 		service.delete(CodVaga);
 	}
 	
-	@PutMapping("/admin/editarEmpresa")
-	public void update(@RequestBody Vaga vaga) {
-		service.update(vaga);
+	@PutMapping("/admin/editarVaga")
+	public ResponseEntity<Vaga> update(@RequestBody Vaga vaga) {
+		vaga = service.update(vaga);
+		return ResponseEntity.ok().body(vaga);
 	}
 
 }

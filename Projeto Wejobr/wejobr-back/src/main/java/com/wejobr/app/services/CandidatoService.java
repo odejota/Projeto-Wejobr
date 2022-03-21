@@ -27,8 +27,8 @@ public class CandidatoService {
 	}
 	
 	@Transactional(readOnly = true)
-	public Candidato insert(Candidato candidato) {
-		return repository.save(candidato);
+	public void save(Candidato candidato) {
+		repository.save(candidato);
 	}
 
 	@Transactional(readOnly = false)
@@ -37,8 +37,8 @@ public class CandidatoService {
 	}
 	
 	@Transactional(readOnly = false)
-	public void update(Candidato candidato) {
-		repository.save(candidato);
+	public Candidato update(Candidato candidato) {
+		return repository.save(candidato);
 	}
 
 }

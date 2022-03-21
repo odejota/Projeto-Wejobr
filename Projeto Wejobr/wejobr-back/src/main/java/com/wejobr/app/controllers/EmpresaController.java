@@ -3,6 +3,9 @@ package com.wejobr.app.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+//import org.springframework.web.bind.annotation.CrossOrigin;
+//import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,18 +37,20 @@ public class EmpresaController {
 	}
 
 	@PostMapping("/admin/cadastrarEmpresa")
-	public Empresa insert(@RequestBody Empresa empresa) {
-		return service.insert(empresa);
+	public ResponseEntity<Empresa> save(@RequestBody Empresa empresa) {
+		service.save(empresa);
+		return ResponseEntity.ok().body(empresa);
 	}
 
-	@DeleteMapping("/admin/deletarEmpresa/{IdCandidato}")
+	@DeleteMapping("/admin/deletarEmpresa/{IdEmpresa}")
 	public void delete(@PathVariable Long IdEmpresa) {
 		service.delete(IdEmpresa);
 	}
 	
 	@PutMapping("/admin/editarEmpresa")
-	public void update(@RequestBody Empresa empresa) {
-		service.update(empresa);
+	public ResponseEntity<Empresa> update(@RequestBody Empresa empresa) {
+		empresa = service.update(empresa);
+		return ResponseEntity.ok().body(empresa);
 	}
 
 }

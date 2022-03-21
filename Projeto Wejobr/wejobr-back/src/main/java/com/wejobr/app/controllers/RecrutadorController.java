@@ -3,6 +3,7 @@ package com.wejobr.app.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -35,8 +36,9 @@ public class RecrutadorController {
 	}
 
 	@PostMapping("/admin/cadastrarRecrutador")
-	public Recrutador insert(@RequestBody Recrutador recrutador) {
-		return service.insert(recrutador);
+	public ResponseEntity<Recrutador> save(@RequestBody Recrutador recrutador) {
+		service.save(recrutador);
+		return ResponseEntity.ok().body(recrutador);
 	}
 
 	@DeleteMapping("/admin/deletarRecrutador/{IdRecrutador}")
@@ -45,8 +47,9 @@ public class RecrutadorController {
 	}
 	
 	@PutMapping("/admin/editarRecrutador")
-	public void update(@RequestBody Recrutador recrutador) {
-		service.update(recrutador);
-}
+	public ResponseEntity<Recrutador> update(@RequestBody Recrutador recrutador) {
+		recrutador = service.update(recrutador);
+		return ResponseEntity.ok().body(recrutador);
+	}
 
 }

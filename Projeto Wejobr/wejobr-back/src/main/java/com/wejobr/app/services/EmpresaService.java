@@ -26,8 +26,8 @@ public class EmpresaService {
 	}
 	
 	@Transactional(readOnly = true)
-	public Empresa insert(Empresa empresa) {
-		return repository.save(empresa);
+	public void save(Empresa empresa) {
+		repository.save(empresa);
 	}
 
 	@Transactional(readOnly = false)
@@ -36,8 +36,8 @@ public class EmpresaService {
 	}
 	
 	@Transactional(readOnly = false)
-	public void update(Empresa empresa) {
-		repository.save(empresa);
+	public Empresa update(Empresa empresa) {
+		return repository.save(empresa);
 	}
 
 }
