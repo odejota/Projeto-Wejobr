@@ -29,7 +29,7 @@ function Navbar() {
                             <Link to='/' className="nav-link active">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active" href="#" onClick={hShow}>Candidato</a>
+                            <Link to='' className="nav-link active" onClick={hShow}>Candidato</Link>
                             {show ? <ModalLogin show={show} hClose={hClose} /> : <></>}
                         </li>
                         <li className="nav-item">
@@ -47,11 +47,11 @@ function Navbar() {
                     </ul>
                     <form className="d-flex align-items-center">
                         <div className="dropdown">
-                            <a className="dropdown-toggle mx-1" href="#" id="idiomaDropdown" data-bs-toggle="dropdown" aria-expanded="false"><i className="bi bi-globe"></i> Idioma</a>
+                            <Link to='' className="dropdown-toggle mx-1" id="idiomaDropdown" data-bs-toggle="dropdown" aria-expanded="false"><i className="bi bi-globe"></i> Idioma</Link>
                             <ul className="dropdown-menu" id="idiomaDropStyle" aria-labelledby="idiomaDropdown">
-                                <li><a className="dropdown-item" href="#"><img src={BR} alt="BR" /> Português</a></li>
-                                <li><a className="dropdown-item" href="#"><img src={EN} alt="EN" /> Inglês</a></li>
-                                <li><a className="dropdown-item" href="#"><img src={ES} alt="ES" /> Espanhol</a></li>
+                                <li className="dropdown-item"><img src={BR} alt="BR" /> Português</li>
+                                <li className="dropdown-item"><img src={EN} alt="EN" /> Inglês</li>
+                                <li className="dropdown-item"><img src={ES} alt="ES" /> Espanhol</li>
                             </ul>
                         </div>
                         <button className="btn btnEntrar mx-1" type="button" onClick={hShow}>Entrar</button>

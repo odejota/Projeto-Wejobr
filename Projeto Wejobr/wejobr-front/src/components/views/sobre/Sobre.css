@@ -13,6 +13,11 @@
     font-weight: 300;
 }
 
+.squad22{
+    display: flex;
+    justify-content: center;
+}
+
 .squad22 img{
     width: 140px;
 }
@@ -26,6 +31,8 @@
 .squad22 .col-lg-4 {
     margin-bottom: 1.5rem;
     text-align: center;
+    /* display: flex; */
+    justify-content: center;
 }
 
 .simbolo{

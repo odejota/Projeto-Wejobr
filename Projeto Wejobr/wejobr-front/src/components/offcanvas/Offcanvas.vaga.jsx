@@ -19,7 +19,7 @@ function OffcanvasVaga(props) {
         event.preventDefault()
         conn.put('/vagas/admin/editarVaga', {
             codVaga: props.vaga.codVaga,
-            codVaga: codVaga.current.value,
+            // codVaga: codVaga.current.value,
             cargoVaga: cargoVaga.current.value,
             descricaoVaga: descricaoVaga.current.value,
             salarioVaga: salarioVaga.current.value,

@@ -22,28 +22,28 @@ function Sobre() {
 
             <h3>Os wejobers (Squad 22)</h3>
             <div className="squad22 mt-4">
-                <div className="row">
-                    <div className="col-lg-4">
-                        <img src={Carla} alt="Carla Image" className='rounded-circle shadow' />
+                <div className="row d-flex justify-content-center">
+                    <div className="col-lg-4 mx-4">
+                        <img src={Carla} alt="Carla Peloia" className='rounded-circle shadow' />
 
                         <h5>Carla Peloia</h5>
-                        <a className="bi bi-github fs-4 text-dark mx-2" href="#"></a>
-                        <a className="bi bi-linkedin fs-4 text-dark mx-2" href="#"></a>
+                        <a className="bi bi-github fs-4 text-dark mx-2" href="https://github.com/carlapeloia"><i className=''></i></a>
+                        <a className="bi bi-linkedin fs-4 text-dark mx-2" href="https://www.linkedin.com/in/carla-peloia-1a639b106/"><i className=''></i></a>
                     </div>
-                    <div className="col-lg-4">
-                        <img src={Danilo} alt="Danilo Image" className='rounded-circle shadow' />
+                    <div className="col-lg-4 mx-4">
+                        <img src={Danilo} alt="Danilo José" className='rounded-circle shadow' />
 
                         <h5>Danilo José</h5>
-                        <a className="bi bi-github fs-4 text-dark mx-2" href="#"></a>
-                        <a className="bi bi-linkedin fs-4 text-dark mx-2" href="#"></a>
+                        <a className="bi bi-github fs-4 text-dark mx-2" href="https://github.com/odejota"><i className=''></i></a>
+                        <a className="bi bi-linkedin fs-4 text-dark mx-2" href="https://www.linkedin.com/in/danjsan/"><i className=''></i></a>
                     </div>
-                    <div className="col-lg-4">
+                    {/* <div className="col-lg-4">
                         <img src={Flavio} alt="Flávio Image" className='rounded-circle shadow' />
 
                         <h5>Flávio Silva</h5>
                         <a className="bi bi-github fs-4 text-dark mx-2" href="#"></a>
                         <a className="bi bi-linkedin fs-4 text-dark mx-2" href="#"></a>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
