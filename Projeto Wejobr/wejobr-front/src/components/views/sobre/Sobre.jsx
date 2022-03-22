@@ -1,7 +1,7 @@
 import './Sobre.css';
 import Carla from '../../../img/Sobre/card-sobre.Carla.jpg';
 import Danilo from '../../../img/Sobre/card-sobre.Danilo.png';
-import Flavio from '../../../img/Sobre/card-sobre.Flavio.jpg';
+// import Flavio from '../../../img/Sobre/card-sobre.Flavio.jpg';
 import oSimbolo from '../../../img/SVG Logos/Wejobr-Logo-Explanação.svg';
 
 function Sobre() {
