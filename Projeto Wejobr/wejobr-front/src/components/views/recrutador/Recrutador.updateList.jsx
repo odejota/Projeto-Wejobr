@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import conn from '../../../server/conn';
+import RecUpdate from '../../offcanvas/Offcanvas.recrutador';
 import '../vagas/Vagas.css';
-import RecUpdate from './Recrutador.update';
 
 function RecUpdtList() {
 
@@ -17,7 +17,7 @@ function RecUpdtList() {
     const [recrutadorUpdt, setRecrutadorUpdt] = useState();
 
     useEffect(() => {
-        conn.get('/recrutadores')
+        conn.get('/recrutadores/admin/listarTodos')
             .then((res) => {
                 setRecrutador(res.data)
             })
@@ -51,7 +51,7 @@ function RecUpdtList() {
                                 <td>{recrutador.departamentoRecrutador}</td>
                                 <td>{recrutador.cargoRecrutador}</td>
                                 <td>
-                                    <button className="btn btn-warning btn-sm" onClick={() => hShow(recrutador)}>Editar</button>
+                                    <button className="btn btnEntrar btn-sm" onClick={() => hShow(recrutador)}>Editar</button>
                                 </td>
                             </tr>
                         ))}

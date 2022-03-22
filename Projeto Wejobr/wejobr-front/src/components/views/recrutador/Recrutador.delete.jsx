@@ -8,7 +8,7 @@ function RecDel() {
     const [recrutador, setRecrutador] = useState([]);
 
     useEffect(() => {
-        conn.get('/recrutadores')
+        conn.get('/recrutadores/admin/listarTodos')
             .then((res) => {
                 setRecrutador(res.data)
             })
@@ -17,7 +17,7 @@ function RecDel() {
 
     function deletar(del) {
         conn.delete(`/recrutadores/admin/deletarRecrutador/${del.target.value}`)
-            .then(() => conn.get('/recrutadores')
+            .then(() => conn.get('/recrutadores/admin/listarTodos')
                 .then((res) => {
                     setRecrutador(res.data)
                 })

@@ -3,6 +3,7 @@ package com.wejobr.app.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,7 +35,6 @@ public class VagaController {
 	public Vaga selectedById(@PathVariable Long CodVaga) {
 		return service.selectById(CodVaga).get();
 	}
-	
 
 	@PostMapping("/admin/cadastrarVaga")
 	public ResponseEntity<Vaga> save(@RequestBody Vaga vaga) {
@@ -53,4 +53,8 @@ public class VagaController {
 		return ResponseEntity.ok().body(vaga);
 	}
 
+//	@GetMapping("/vagaDestaque/{VagaDestaque}")
+//	public List<Vaga> selectByDestaque(@PathVariable Sort VagaDestaque) {
+//		return service.selectByDestaque(VagaDestaque);
+//	}
 }

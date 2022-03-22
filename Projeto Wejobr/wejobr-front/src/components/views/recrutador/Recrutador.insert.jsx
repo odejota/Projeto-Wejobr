@@ -39,47 +39,47 @@ function RecInsert() {
                 <form className="bg-light row g-3 rounded p-3 form-floating" onSubmit={sendData}>
                     <div className="col-md-12 form-floating">
                         <input required type="text" className="form-control" id="floatingInput" placeholder='Seu Nome Aqui' ref={nomeRecrutador}/>
-                        <label for="floatingInput">Nome do recrutador</label>
+                        <label htmlFor="floatingInput">Nome do recrutador</label>
                     </div>
                     <div className="col-md-4 form-floating">
                         <input required type="email" className="form-control" id="floatingInput" placeholder='Seu endereço de e-mail na empresa' ref={emailRecrutador}/>
-                        <label for="floatingInput">E-mail comercial</label>
+                        <label htmlFor="floatingInput">E-mail comercial</label>
                     </div>
                     <div className="col-md-4 form-floating">
                         <input required type="text" className="form-control" id="floatingInput" placeholder='Seu número telefone na empresa' ref={telRecrutador}/>
-                        <label for="floatingInput">Telefone comercial</label>
+                        <label htmlFor="floatingInput">Telefone comercial</label>
                     </div>
                     <div className="col-md-4 form-floating">
                         <input required type="text" className="form-control" id="floatingInput" placeholder='Seu número de telefone celular' ref={outroContatoRecrutador}/>
-                        <label for="floatingInput">Telefone celular</label>
+                        <label htmlFor="floatingInput">Telefone celular</label>
                     </div>
                     <div className="col-md-6 form-floating">
                         <input required type="password" className="form-control" id="floatingInput" placeholder='Crie uma senha forte' ref={senhaRecrutador}/>
-                        <label for="floatingInput">Senha</label>
+                        <label htmlFor="floatingInput">Senha</label>
                     </div>
                     <div className="col-md-6 form-floating">
                         <input required type="password" className="form-control" id="floatingInput" placeholder='Confirme a senha criada' ref={senhaRecrutador}/>
-                        <label for="floatingInput">Confirmar senha</label>
+                        <label htmlFor="floatingInput">Confirmar senha</label>
                     </div>
                     <div className="col-md-6 form-floating">
                         <input required type="text" className="form-control" id="floatingInput" placeholder='Informe o nome da empresa que representa' ref={empresaRecrutador}/>
-                        <label for="floatingInput">Empresa representada</label>
+                        <label htmlFor="floatingInput">Empresa representada</label>
                     </div>
                     <div className="col-md-6 form-floating">
                         <input required type="text" className="form-control" id="floatingInput" placeholder='ID da empresa no Wejobr' ref={codEmpresa}/>
-                        <label for="floatingInput">Código identificador da empresa</label>
+                        <label htmlFor="floatingInput">Código identificador da empresa</label>
                     </div>
                     <div className="col-md-6 form-floating">
                         <input required type="text" className="form-control" id="floatingInput" placeholder='Em qual depto. você trabalha?' ref={departamentoRecrutador}/>
-                        <label for="floatingInput">Departamento</label>
+                        <label htmlFor="floatingInput">Departamento</label>
                     </div>
                     <div className="col-md-6 form-floating">
                         <input required type="text" className="form-control" id="floatingInput" placeholder='Qual cargo você ocupa na empresa?' ref={cargoRecrutador}/>
-                        <label for="floatingInput">Cargo</label>
+                        <label htmlFor="floatingInput">Cargo</label>
                     </div>
                     <div className="form-check">
                         <input required className="form-check-input" type="checkbox" id="gridCheck" />
-                        <label className="form-check-label" for="gridCheck">
+                        <label className="form-check-label" htmlFor="gridCheck">
                             Li e aceito os presentes Termos e Condições de Uso
                         </label>
                     </div>

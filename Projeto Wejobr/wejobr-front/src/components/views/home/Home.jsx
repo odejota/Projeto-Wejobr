@@ -11,8 +11,8 @@ function Home() {
             <section className="container mt-4" id="homeSection1">
 
                 <div className="my-3 homeBtns">
-                    <a className="btn btnProcEmp mx-1" type="button">Procurando emprego?</a>
-                    <a className="btn btnContrat mx-1" type="button">Querendo contratar?</a>
+                    <Link to='/vagas' className="btn btnProcEmp mx-1" type="button">Procurando emprego?</Link>
+                    <Link to='' className="btn btnContrat mx-1" type="button">Querendo contratar?</Link>
                 </div>
 
                 <hr />

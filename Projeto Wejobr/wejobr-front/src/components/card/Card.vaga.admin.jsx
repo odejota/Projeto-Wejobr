@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
+import { Modal } from 'react-bootstrap';
 import conn from '../../server/conn';
-import ModalVaga from '../modal/Modal.vaga';
 import OffcanvasVaga from '../offcanvas/Offcanvas.vaga';
 import './Card.vaga.css';
 
@@ -53,7 +53,6 @@ function CardVagaAdm() {
 
                             <div className='row d-flex justify-content-evenly'>
                                 <button type="button" className="btn btn-sm col mx-1 btnVaga" onClick={hShow}>Detalhar</button>
-                                {show ? <ModalVaga show={show} hClose={hClose} /> : <></>}
                                 <button type="button" className="btn btn-sm col mx-1 btnEntrar" onClick={() => hShowOc(vaga)}>Editar</button>
                                 {showOc ? <OffcanvasVaga showOc={showOc} hCloseOc={hCloseOc} vaga={vagaUpdt} /> : <></>}
                                 <button type="button" className="btn btn-sm col mx-1 btnDeletar" value={vaga.codVaga} onClick={(del) => deletar(del)}>Apagar</button>
@@ -61,6 +60,66 @@ function CardVagaAdm() {
 
                         </div>
                     </div>
+
+                    <Modal aria-labelledby="contained-modal-title-vcenter" centered show={show} onHide={hClose}>
+
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h5 className="modal-title">Detalhes da vaga</h5>
+                                <i className="bi bi-x-circle fs-5 float-end" onClick={hClose}></i>
+                            </div>
+                            <div className="modal-body">
+                                <div className="container-fluid">
+                                    <div className="row">
+                                        <div className="col-md-6 ml-auto">
+                                            <h6>Cargo</h6>
+                                            <p>{vaga.cargoVaga}</p>
+                                        </div>
+                                        <div className="col-md-6 ml-auto">
+                                            <h6>Código da vaga</h6>
+                                            <p>{vaga.codVaga}</p>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-md-6 ml-auto">
+                                            <h6>Salário</h6>
+                                            <p>R$ {vaga.salarioVaga}</p>
+                                        </div>
+                                        <div className="col-md-6 ml-auto">
+                                            <h6>Localidade</h6>
+                                            <p>{vaga.localidadeVaga}</p>
+                                        </div>
+                                    </div>
+                                    <h6>Descrição da vaga</h6>
+                                    <p>{vaga.descricaoVaga}</p>
+                                    <div className="row">
+                                        <div className="col-md-6 ml-auto">
+                                            <h6>Nível de instrução</h6>
+                                            <p>{vaga.nivelInstrucaoVaga}</p>
+                                        </div>
+                                        <div className="col-md-6 ml-auto">
+                                            <h6>Vaga também direcionada à PCD?</h6>
+                                            <p>{vaga.vagaPcd}</p>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-md-6 ml-auto">
+                                            <h6>Regime de contratação</h6>
+                                            <p>{vaga.regimeContratacaoVaga}</p>
+                                        </div>
+                                        <div className="col-md-6 ml-auto">
+                                            <h6>Empresa</h6>
+                                            <p>{vaga.nomeEmpresaVaga}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="modal-footer">
+                                <button type="button" className="btn btnFechar" data-dismiss="modal" onClick={hClose}>Fechar</button>
+                            </div>
+                        </div>
+                    </Modal>
+
                 </div>
             ))}
         </>
