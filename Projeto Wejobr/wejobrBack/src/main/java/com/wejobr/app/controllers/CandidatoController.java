@@ -21,7 +21,7 @@ import com.wejobr.app.services.CandidatoService;
 
 @RestController
 @RequestMapping ("/candidatos")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://wejobr.netlify.app/")
 public class CandidatoController {
 	
 	@Autowired

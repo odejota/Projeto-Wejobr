@@ -19,7 +19,7 @@ import com.wejobr.app.services.RecrutadorService;
 
 @RestController
 @RequestMapping ("/recrutadores")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://wejobr.netlify.app/")
 public class RecrutadorController {
 	
 	@Autowired

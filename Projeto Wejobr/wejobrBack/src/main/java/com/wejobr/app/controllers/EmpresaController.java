@@ -20,7 +20,7 @@ import com.wejobr.app.services.EmpresaService;
 
 @RestController
 @RequestMapping ("/empresas")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://wejobr.netlify.app/")
 public class EmpresaController {
 	
 	@Autowired
