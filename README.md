@@ -1,5 +1,5 @@
 # Projeto Wejobr
-Wejobr é um projeto de site de vagas voltadas à refugiados, realizado como projeto final contemplando a 4ª entrega durante os estudos na Recode Pro.
+Wejobr é um projeto de site de vagas voltadas à refugiados, realizado como projeto final contemplando a 4ª entrega durante os estudos na [Recode Pro](https://recodepro.org.br/).
 
 ![](https://github.com/odejota/Projeto-Wejobr/blob/main/ScreenshotWejobr.jpg)
 
