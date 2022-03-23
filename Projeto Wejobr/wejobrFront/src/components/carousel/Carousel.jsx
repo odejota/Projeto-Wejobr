@@ -3,6 +3,7 @@ import './Carousel.css';
 import slide1 from '../../img/Header/pexels-ono-kosuki-6000172 - Copia (2).jpg';
 import slide2 from '../../img/Header/immigration-people - Copia (2).jpg';
 import slide3 from '../../img/Header/pexels-ono-kosuki-6000175 - Copia (2).jpg';
+import { Link } from 'react-router-dom';
 
 function Carousel() {
     return (
@@ -15,7 +16,7 @@ function Carousel() {
                         <div className="carousel-caption text-start">
                             <h2>Oportunidades</h2>
                             <p className='d-none d-sm-block'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                            <button className='d-none d-sm-block btn btnEntrar'>Ver vagas</button>
+                            <Link to='/vagas' className='d-none d-sm-block btn btnEntrar'>Ver vagas</Link>
                         </div>
                     </div>
                 </div>
@@ -26,7 +27,7 @@ function Carousel() {
                         <div className="carousel-caption d-flex flex-column">
                             <h2>Todo o mundo é bem-vindo!</h2>
                             <p className='d-none d-sm-block'>Enim officiis aperiam fugit illum autem suscipit, temporibus dicta dolores quia nulla architecto eius in, porro corrupti pariatur eaque eum, facere ex!</p>
-                            <button className='d-none d-sm-block btn btnCadastrar'>Cadastre-se</button>
+                            <Link to='/candidato/cadastrarCandidato' className='d-none d-sm-block btn btnCadastrar'>Cadastre-se</Link>
                         </div>
                     </div>
                 </div>
@@ -37,7 +38,7 @@ function Carousel() {
                         <div className="carousel-caption text-end">
                             <h2>Nós. Trabalho. Brasil.</h2>
                             <p className='d-none d-sm-block'>Ratione qui, hic assumenda quod rem tenetur consequuntur, quo ad iure quasi illo itaque quos quae totam ex porro quisquam voluptates ducimus.</p>
-                            <button className='d-none d-sm-block btn btnVaga float-end'>Dê oportunidades</button>
+                            <Link to='/vagas/cadastrarVaga' className='d-none d-sm-block btn btnVaga float-end'>Dê oportunidades</Link>
                         </div>
                     </div>
                 </div>

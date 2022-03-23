@@ -12,7 +12,7 @@ function Home() {
 
                 <div className="my-3 homeBtns">
                     <Link to='/vagas' className="btn btnProcEmp mx-1" type="button">Procurando emprego?</Link>
-                    <Link to='' className="btn btnContrat mx-1" type="button">Querendo contratar?</Link>
+                    <Link to='/vagas/cadastrarVaga' className="btn btnContrat mx-1" type="button">Querendo contratar?</Link>
                 </div>
 
                 <hr />

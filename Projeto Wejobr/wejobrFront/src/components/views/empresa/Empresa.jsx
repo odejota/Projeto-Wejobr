@@ -19,7 +19,7 @@ function Empresa() {
                     <div className="col-md-7">
                         <h2 className="featurette-heading">Diversidade.</h2>
                         <p className="lead">Traga mais diversidade para o ambiente de trabalho da sua empresa, com pessoas que demostram alto grau de motivação com trajetórias, qualificações e experiências, que podem colaborar com o desempenho da sua organização.</p>
-                        <Link to='' className='btn btnEntrar'>Buscar currículos</Link>
+                        <Link to='/vagas/cadastrarVaga' className='btn btnVaga'>Cadastrar vagas</Link>
 
                     </div>
                     <div className="col-md-5">
@@ -33,7 +33,7 @@ function Empresa() {
                     <div className="col-md-7 order-md-2">
                         <h2 className="featurette-heading">Lorem. <span className="text-muted">Ipsum.</span></h2>
                         <p className="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fugiat recusandae iusto. Natus esse inventore amet eos, nihil minima laborum, consectetur voluptate vitae ea quo officiis deserunt, delectus quos. Hic.</p>
-                        <Link to='/vagas/cadastrarVaga' className='btn btnVaga'>Cadastrar vagas</Link>
+                        <Link to='/gerenciarVagas' className='btn btnEntrar'>Gerenciar vagas</Link>
 
                     </div>
                     <div className="col-md-5 order-md-1">
@@ -58,7 +58,7 @@ function Empresa() {
 
                 <div className="row btnsEmp">
                     <Link to='/vagas/cadastrarVaga' className='btn btnVaga col-5 col-md-4 col-lg-3 m-3'>Cadastrar vagas</Link>
-                    <Link to='' className='btn btnEntrar col-5 col-md-4 col-lg-3 m-3'>Buscar currículos</Link>
+                    <Link to='/gerenciarVagas' className='btn btnEntrar'>Gerenciar vagas</Link>
                     <Link to='/empresa/cadastrarEmpresa' className='btn btnCadastrar col-7 col-md-4 col-lg-3 m-3'>Cadastre sua empresa</Link>
                 </div>
 

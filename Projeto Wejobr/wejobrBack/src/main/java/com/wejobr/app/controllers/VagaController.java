@@ -20,6 +20,7 @@ import com.wejobr.app.services.VagaService;
 @RestController
 @RequestMapping ("/vagas")
 @CrossOrigin(origins = "https://wejobr.netlify.app/")
+//@CrossOrigin(origins = "http://localhost:3000")
 public class VagaController {
 	
 	@Autowired
